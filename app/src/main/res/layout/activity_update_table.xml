@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:weightSum="2.0"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Update_All_Table">
+
+    <TextView
+        android:background="@drawable/border_mau_vien1"
+
+        android:textStyle="bold"
+        android:textColor="#f39"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:text="Cập nhập Bàn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <Button
+        android:id="@+id/button_update_table_add"
+        android:background="@drawable/border_vien"
+        android:gravity="center"
+        android:text="+ Thêm bàn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <android.support.v7.widget.RecyclerView
+
+        android:id="@+id/recycler_view_add_table"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
+
+
+
+</LinearLayout>

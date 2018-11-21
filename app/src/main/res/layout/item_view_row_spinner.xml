@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@drawable/border_vien_vuong"
+    android:weightSum="2.0"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textColor="#f39"
+        android:textSize="20dp"
+        android:id="@+id/textview_item_spinner_id"
+        android:text="11"
+        android:gravity="left"
+        android:layout_weight="1.0"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+    <TextView
+    android:textColor="#f39"
+    android:textSize="20dp"
+    android:id="@+id/textview_item_spinner_ten"
+    android:text="Đồ ăn nhanh"
+    android:gravity="left"
+    android:layout_weight="1.0"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent" />
+
+</LinearLayout>

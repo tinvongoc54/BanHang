@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_Coffee"
+        android:title="Cà Phê"
+        />
+    <item
+        android:id="@+id/menu_cannedWater"
+        android:title="Nước Lon"
+        />
+    <item
+        android:id="@+id/menu_bottledWater"
+        android:title="Nước Đóng Chai"
+        />
+    <item
+        android:id="@+id/menu_tea"
+        android:title="Trà"
+        />
+    <item
+        android:id="@+id/menu_fruit"
+        android:title="Nước Ép"
+        />
+    <item
+        android:id="@+id/menu_fastFood"
+        android:title="Đồ Ăn Nhanh"
+        />
+    <item
+        android:id="@+id/menu_other"
+        android:title="Thứ Khác"
+        />
+
+
+</menu>
