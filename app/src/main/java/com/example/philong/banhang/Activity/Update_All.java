@@ -25,12 +25,12 @@ public class Update_All extends AppCompatActivity {
         butonUpdateEmployee=findViewById(R.id.button_update_employee);
     }
     void XuLyEvent(){
-        buttonUpdateMenu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Update_All.this,Update_All_Product.class));
-            }
-        });
+//        buttonUpdateMenu.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(Update_All.this,Update_All_Product.class));
+//            }
+//        });
 
         buttonUpdateTable.setOnClickListener(new View.OnClickListener() {
             @Override

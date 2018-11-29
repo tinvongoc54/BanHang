@@ -41,7 +41,8 @@ public class Update_All_Table extends AppCompatActivity {
 
     Button buttonInsertTable;
 
-    String urlDeleteDataTable="http://192.168.1.188/GraceCoffee/deleteTable.php";
+    MainActivity mainActivity = new MainActivity();
+    String urlDeleteDataTable = mainActivity.urlIPAddress + "/GraceCoffee/deleteTable.php";
     //khai báo 2 thuộc tính để setup grid layout
     RecyclerView.LayoutManager recyclerViewLayoutManager;
     Context context;

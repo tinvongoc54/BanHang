@@ -210,11 +210,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
+            android:id="@+id/textView_Staff"
             android:layout_weight="1.0"
             android:textColor="#ff4a47"
             android:textStyle="bold|italic"
             android:layout_gravity="center"
-            android:text="QTV : Nguyễn Quốc Bảo"
+            android:text="Nguyễn Quốc Bảo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>
@@ -472,13 +473,13 @@
             android:text="Giảm giá : "
             android:textColor="#050505" />
 
-        <TextView
+        <EditText
             android:textSize="12dp"
-            android:id="@+id/text_view_perCent"
+            android:id="@+id/editText_perCent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:text="20"
+            android:text="0"
             android:textColor="#050505" />
 
         <TextView
@@ -510,7 +511,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:text="3.000.000"
+            android:text="0"
             android:textColor="#050505" />
 
         <TextView
@@ -576,94 +577,108 @@
             android:layout_weight="9.0"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:background="@drawable/border_mau_vien"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <!--<android.support.v7.widget.RecyclerView-->
+                <!--android:id="@+id/recycler_view_category"-->
+
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+
+            <!--</android.support.v7.widget.RecyclerView>-->
+
+            <ListView
+                android:id="@+id/listView_Category"
                 android:layout_margin="5dp"
-                android:orientation="vertical">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></ListView>
 
-                <Button
-                    android:background="@drawable/custom_button_danhmuc"
-                    android:id="@+id/button_category_coffee"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Coffee/Espresso"
-                     />
+            <!--<LinearLayout-->
+                <!--android:background="@drawable/border_mau_vien"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="5dp"-->
+                <!--android:orientation="vertical">-->
 
-                <!--<TextView-->
+                <!--<Button-->
+                    <!--android:background="@drawable/custom_button_danhmuc"-->
+                    <!--android:id="@+id/button_category_coffee"-->
                     <!--android:layout_width="match_parent"-->
                     <!--android:layout_height="wrap_content"-->
-                    <!--android:gravity="center"-->
-                    <!--android:text="Cà Phê"-->
-                    <!--android:textColor="#ef0404" />-->
-            </LinearLayout>
+                    <!--android:text="Coffee/Espresso"-->
+                     <!--/>-->
 
-            <LinearLayout
-                android:background="@drawable/border_mau_vien"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:orientation="vertical">
+                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:text="Cà Phê"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textColor="#ef0404" />&ndash;&gt;-->
+            <!--</LinearLayout>-->
 
-                <Button
-                    android:id="@+id/button_category_cannedWater"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/custom_button_danhmuc"
-                    android:text="Trà"/>
+            <!--<LinearLayout-->
+                <!--android:background="@drawable/border_mau_vien"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="5dp"-->
+                <!--android:orientation="vertical">-->
 
-                <!--<TextView-->
+                <!--<Button-->
+                    <!--android:id="@+id/button_category_cannedWater"-->
                     <!--android:layout_width="match_parent"-->
                     <!--android:layout_height="wrap_content"-->
-                    <!--android:gravity="center"-->
-                    <!--android:text="Nước Lon"-->
-                    <!--android:textColor="#ef0404" />-->
-            </LinearLayout>
+                    <!--android:background="@drawable/custom_button_danhmuc"-->
+                    <!--android:text="Trà"/>-->
 
-            <LinearLayout
-                android:background="@drawable/border_mau_vien"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:orientation="vertical">
+                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:text="Nước Lon"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textColor="#ef0404" />&ndash;&gt;-->
+            <!--</LinearLayout>-->
 
-                <Button
-                    android:background="@drawable/custom_button_danhmuc"
-                    android:text="Sinh tố"
-                    android:id="@+id/button_category_bottledWater"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+            <!--<LinearLayout-->
+                <!--android:background="@drawable/border_mau_vien"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="5dp"-->
+                <!--android:orientation="vertical">-->
 
-                <!--<TextView-->
+                <!--<Button-->
+                    <!--android:background="@drawable/custom_button_danhmuc"-->
+                    <!--android:text="Sinh tố"-->
+                    <!--android:id="@+id/button_category_bottledWater"-->
                     <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:gravity="center"-->
-                    <!--android:text="Nước Chai"-->
-                    <!--android:textColor="#ef0404" />-->
-            </LinearLayout>
+                    <!--android:layout_height="wrap_content" />-->
 
-            <LinearLayout
-                android:background="@drawable/border_mau_vien"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:orientation="vertical">
+                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:text="Nước Chai"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textColor="#ef0404" />&ndash;&gt;-->
+            <!--</LinearLayout>-->
 
-                <Button
-                    android:background="@drawable/custom_button_danhmuc"
-                    android:text="Đá xay"
-                    android:id="@+id/button_category_tea"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+            <!--<LinearLayout-->
+                <!--android:background="@drawable/border_mau_vien"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="5dp"-->
+                <!--android:orientation="vertical">-->
 
-                <!--<TextView-->
+                <!--<Button-->
+                    <!--android:background="@drawable/custom_button_danhmuc"-->
+                    <!--android:text="Đá xay"-->
+                    <!--android:id="@+id/button_category_tea"-->
                     <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:gravity="center"-->
-                    <!--android:text="Trà"-->
-                    <!--android:textColor="#ef0404" />-->
-            </LinearLayout>
+                    <!--android:layout_height="wrap_content"/>-->
+
+                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:text="Trà"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textColor="#ef0404" />&ndash;&gt;-->
+            <!--</LinearLayout>-->
 
             <!--<LinearLayout-->
                 <!--android:layout_width="match_parent"-->

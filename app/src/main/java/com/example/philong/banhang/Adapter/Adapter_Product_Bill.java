@@ -1,7 +1,9 @@
 package com.example.philong.banhang.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -9,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -41,8 +44,8 @@ public class Adapter_Product_Bill extends RecyclerView.Adapter<Adapter_Product_B
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
-        holder.txtName.setText(menuUpdatesBillArrayList.get(position).getName());
-        holder.txtPrice.setText(String.valueOf(menuUpdatesBillArrayList.get(position).getPrice()));
+        holder.txtName.setText(menuUpdatesBillArrayList.get(position).getProduct_name());
+        holder.txtPrice.setText(String.valueOf(menuUpdatesBillArrayList.get(position).getProduct_price()));
         holder.txtSoLuong.setText(String.valueOf(menuUpdatesBillArrayList.get(position).getSize()));
 
 
@@ -51,8 +54,17 @@ public class Adapter_Product_Bill extends RecyclerView.Adapter<Adapter_Product_B
             @Override
             public boolean onKey(View view, int i, KeyEvent keyEvent) {
                 if ((keyEvent.getAction() == KeyEvent.ACTION_DOWN) && (i == KeyEvent.KEYCODE_ENTER)) {
-                    int soLuong = Integer.parseInt(holder.txtSoLuong.getText().toString());
+                    int soLuong = 1;
+                    if (!holder.txtSoLuong.getText().toString().equals("")) {
+                        soLuong = Integer.parseInt(holder.txtSoLuong.getText().toString().trim());
+                        if (soLuong > 100) {
+                            soLuong = 100;
+                        } else if (soLuong < 1) {
+                            soLuong = 1;
+                        }
+                    }
                     menuUpdatesBillArrayList.get(position).setSize(soLuong);
+                    holder.txtSoLuong.setText(String.valueOf(soLuong));
                     total.setText(String.valueOf(TongTien()));
                     return true;
                 }
@@ -63,7 +75,7 @@ public class Adapter_Product_Bill extends RecyclerView.Adapter<Adapter_Product_B
         holder.btnCong.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int soLuong = Integer.parseInt(holder.txtSoLuong.getText().toString());
+                int soLuong = Integer.parseInt(holder.txtSoLuong.getText().toString().trim());
                 soLuong++;
                 menuUpdatesBillArrayList.get(position).setSize(soLuong);
                 holder.txtSoLuong.setText(String.valueOf(menuUpdatesBillArrayList.get(position).getSize()));
@@ -74,7 +86,7 @@ public class Adapter_Product_Bill extends RecyclerView.Adapter<Adapter_Product_B
         holder.btnTru.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int soLuong = Integer.parseInt(holder.txtSoLuong.getText().toString());
+                int soLuong = Integer.parseInt(holder.txtSoLuong.getText().toString().trim());
                 if (soLuong > 1) {
                     soLuong--;
                     menuUpdatesBillArrayList.get(position).setSize(soLuong);
@@ -89,7 +101,9 @@ public class Adapter_Product_Bill extends RecyclerView.Adapter<Adapter_Product_B
         holder.imageButtonXoa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                menuUpdatesBillArrayList.remove(position-1);
+                Intent intent = new Intent("intent_vitrixoabill");
+                intent.putExtra("position", position);
+                LocalBroadcastManager.getInstance(context).sendBroadcast(intent);
             }
         });
 
@@ -103,7 +117,7 @@ public class Adapter_Product_Bill extends RecyclerView.Adapter<Adapter_Product_B
         int tong=0;
         for (int i=0; i<menuUpdatesBillArrayList.size(); i++) {
             Product_Bill product_bill = menuUpdatesBillArrayList.get(i);
-            tong += product_bill.getPrice()*product_bill.getSize();
+            tong += Integer.parseInt(product_bill.getProduct_price())*product_bill.getSize();
         }
         return tong;
     }

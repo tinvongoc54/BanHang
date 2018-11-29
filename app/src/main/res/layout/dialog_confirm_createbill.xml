@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_margin="10dp"
+        android:textSize="25sp"
+        android:text="Thành tiền: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/textViewThanhTien"
+        android:layout_toRightOf="@+id/textView1"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="25sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_below="@+id/textView1"
+        android:layout_margin="10dp"
+        android:textSize="25sp"
+        android:text="Khách đưa: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/editTextTienKhachDua"
+        android:layout_below="@+id/textViewThanhTien"
+        android:layout_toRightOf="@+id/textView2"
+        android:textSize="20sp"
+        android:inputType="number"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_below="@id/textView2"
+        android:textSize="25sp"
+        android:layout_margin="10dp"
+        android:text="Tiền thừa  : "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/textViewTienThua"
+        android:layout_toRightOf="@+id/textView3"
+        android:layout_below="@id/editTextTienKhachDua"
+        android:textSize="25sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/buttonXacNhanDialog"
+        android:layout_below="@+id/textViewTienThua"
+        android:layout_margin="10dp"
+        android:text="Xác nhận"
+        android:textSize="20sp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/buttonHuyDialog"
+        android:layout_below="@+id/textViewTienThua"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:text="Hủy"
+        android:textSize="20sp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

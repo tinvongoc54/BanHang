@@ -46,8 +46,8 @@ public class Adapter_Table extends RecyclerView.Adapter<Adapter_Table.ViewHolder
 
         holder.textViewTable.setText(menuUpdatesTableArrayList.get(position).getName());
         //su ly mau icon table
-         final Drawable notfree = ContextCompat.getDrawable(mainActivityClass,R.drawable.coffeetable);
-         final Drawable free=ContextCompat.getDrawable(mainActivityClass,R.drawable.coffeetable1);
+        final Drawable notfree = ContextCompat.getDrawable(mainActivityClass,R.drawable.coffeetable);
+        final Drawable free=ContextCompat.getDrawable(mainActivityClass,R.drawable.coffeetable1);
         holder.txtNameTable.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -8,6 +8,8 @@
     android:layout_margin="5dp"
     android:layout_height="wrap_content">
     <LinearLayout
+
+        android:id="@+id/linearItem"
         android:gravity="center"
         android:layout_weight="1.0"
         android:orientation="vertical"

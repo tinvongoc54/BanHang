@@ -3,8 +3,8 @@ package com.example.philong.banhang.Objects;
 public class Product_Bill extends Product {
     private int Size;
 
-    public Product_Bill(int id, String name, int price, int size) {
-        super(id, name, price);
+    public Product_Bill(String name, String description, String category, String price, int size) {
+        super(name, description, category, price);
         Size = size;
     }
 

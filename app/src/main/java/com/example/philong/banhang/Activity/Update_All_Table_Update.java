@@ -29,7 +29,8 @@ public class Update_All_Table_Update extends AppCompatActivity {
     //khai bao id cho method update
     int id=0;
     //url
-    String urlUpdateTable="http://192.168.1.188/GraceCoffee/updateTable.php";
+    MainActivity mainActivity = new MainActivity();
+    String urlUpdateTable = mainActivity.urlIPAddress + "/GraceCoffee/updateTable.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

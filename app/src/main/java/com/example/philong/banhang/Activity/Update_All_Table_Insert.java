@@ -25,7 +25,8 @@ public class Update_All_Table_Insert extends AppCompatActivity {
     EditText editTextInsertTable;
     Button buttonInsertTableConfirm,buttonInsertTableCancel;
 
-    String urlInsertTable="http://192.168.1.188/GraceCoffee/insertTable.php";
+    MainActivity mainActivity = new MainActivity();
+    String urlInsertTable= mainActivity.urlIPAddress + "/GraceCoffee/insertTable.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
